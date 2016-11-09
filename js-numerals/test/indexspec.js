@@ -4,10 +4,15 @@
 
 var chai = require ('../node_modules/chai');
 var expect = require ('../node_modules/chai').expect;
+var test = require ('./index');
 
 describe('Sanitize' , function () {
-    it ('returns lowercase of a string ',function () {
-        expect('HELLO WORLD').to.equal('HELLo WORLD');
+
+
+    it ('number matches the english phrase ',function () {
+        var inputNumber = 100;
+        var outputNumber = test.sanitize(inputNumber).trim();
+        expect(outputNumber).to.equal('one hundred');
     });
-    it ('remove any hyphens ');
+
 });
