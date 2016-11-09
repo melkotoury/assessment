@@ -25,7 +25,6 @@ body {
 }
 
 #contact input[type="text"],
-#contact input[type="number"],
 #contact button[type="submit"] {
     font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
 }
@@ -61,7 +60,7 @@ fieldset {
 }
 
 
-#contact input[type="number"],
+
 #contact input[type="text"] {
     width: 100%;
     border: 1px solid #ccc;
@@ -69,15 +68,11 @@ fieldset {
     margin: 0 0 5px;
     padding: 10px;
 }
-#contact input[type=number]::-webkit-inner-spin-button,
-#contact input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
+
 #contact input[type="text"]{
     background: #e4f9f9;
 }
-#contact input[type="number"]:hover,
+
 #contact input[type="text"]:hover{
     -webkit-transition: border-color 0.3s ease-in-out;
     -moz-transition: border-color 0.3s ease-in-out;
