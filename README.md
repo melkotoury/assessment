@@ -12,7 +12,7 @@ Digital Natives Job Excercises
 
 #Testing
 * Mocha and Chai
-* Don't use ~~mocha~~ as it does'nt _ES 6_ Compatible
+* Don't use ~~mocha~~ as it's not compatible with _ES 6_ 
 * Instead use **mocha-traceur** , work fine with _ES 6_
 * e.g: you can do the following when testing:
 ```shell
