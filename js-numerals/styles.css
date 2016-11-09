@@ -69,7 +69,7 @@ fieldset {
     padding: 10px;
 }
 
-#contact input[type="text"]{
+#contact input[id="display"] {
     background: #e4f9f9;
 }
 
