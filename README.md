@@ -20,7 +20,7 @@ Make Sure You're on the same directory as package.json , type the following
 ```shell
 npm install
 ```
-If it is not working , maybe it require permission , insert _**sudo**_ before the command
+If it is not working , maybe it requires permission , insert _**sudo**_ before the command
 
 ```shell
 sudo npm install
