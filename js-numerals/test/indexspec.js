@@ -8,11 +8,24 @@ var test = require ('./index');
 
 describe('Sanitize' , function () {
 
-
-    it ('number matches the english phrase ',function () {
-        var inputNumber = 100;
+    it ('7 == seven ',function () {
+        var inputNumber = 7;
         var outputNumber = test.sanitize(inputNumber).trim();
-        expect(outputNumber).to.equal('one hundred');
+        expect(outputNumber).to.equal('seven');
     });
-
+    it ('42  == forty-two',function () {
+        var inputNumber = 42;
+        var outputNumber = test.sanitize(inputNumber).trim();
+        expect(outputNumber).to.equal('forty-two');
+    });
+    it ('2001 == two thousand and one',function () {
+        var inputNumber = 2001;
+        var outputNumber = test.sanitize(inputNumber).trim();
+        expect(outputNumber).to.equal('two thousand and one');
+    });
+    it ('1999 == nineteen hundred and ninety-nine',function () {
+        var inputNumber = 1999;
+        var outputNumber = test.sanitize(inputNumber).trim();
+        expect(outputNumber).to.equal('nineteen hundred and ninety-nine');
+    });
 });
