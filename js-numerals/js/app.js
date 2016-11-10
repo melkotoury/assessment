@@ -64,45 +64,20 @@
             let result = "";
             for (let numeral of NUMERALS) {
                 if (n >= numeral.value) {
-                    console.log("numeral.value (n>numeral.value)");
-                    console.log(numeral.value);
-
+                    
                     if (n < 100) {
-                        console.log("numeral.value (n<100)");
-                        console.log(numeral.value);
-                        console.log("n (n<100)");
-                        console.log(n);
-
                         result += numeral.str;
-                        console.log("result (n<100)");
-                        console.log(result);
                         n -= numeral.value;
-                        console.log("n (n-=numeral.value)");
-                        console.log(n);
                         if (n > 0) result += "-";
                     }else {
-                        console.log("numeral.value (n>100)");
-                        console.log(numeral.value);
-                        console.log("n (n>100)");
-                        console.log(n);
-
-                        let times = Math.floor(n / numeral.value);
+                          let times = Math.floor(n / numeral.value);
                         if (times == 1){
-
-
                         }
                         else{
-                            console.log("times (n>100)");
-                            console.log(times);
+
                             result += convert(times) + " " + numeral.str;
-                            console.log("result (n>100) numeral.str");
-                            console.log(result);
                             n -= numeral.value * times;
-                            console.log("n (n>100) numeral.value * times");
-                            console.log(n);
                             if (n > 0) result += " and ";
-                            console.log("result (n>100) and");
-                            console.log(result);
                         }
 
                     }
@@ -115,7 +90,6 @@
     var bConvert = document.getElementById("bConvert");
     bConvert.onclick = function () {
         var num = document.getElementById("num").value;
-        console.log(convert(num));
         var display = document.getElementById("display");
         display.value = convert(num);
     };
