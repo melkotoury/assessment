@@ -64,7 +64,7 @@
             let result = "";
             for (let numeral of NUMERALS) {
                 if (n >= numeral.value) {
-                    
+
                     if (n < 100) {
                         result += numeral.str;
                         n -= numeral.value;

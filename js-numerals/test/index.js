@@ -19,15 +19,19 @@ function convert(n) {
                 var numeral = _step.value;
 
                 if (n >= numeral.value) {
+
                     if (n < 100) {
                         result += numeral.str;
                         n -= numeral.value;
                         if (n > 0) result += "-";
                     } else {
                         var times = Math.floor(n / numeral.value);
-                        result += convert(times) + " " + numeral.str;
-                        n -= numeral.value * times;
-                        if (n > 0) result += " and ";
+                        if (times == 1) {} else {
+
+                            result += convert(times) + " " + numeral.str;
+                            n -= numeral.value * times;
+                            if (n > 0) result += " and ";
+                        }
                     }
                 }
             }
