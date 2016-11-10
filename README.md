@@ -2,6 +2,7 @@ Digital Natives Job Excercises
 
 # Codebase
 * Vanilla Ecmascript 6
+* Vanilla Ecmascript 5
 
 #Compatibility
 
@@ -12,9 +13,20 @@ Digital Natives Job Excercises
 
 #Testing
 * Mocha and Chai
-* Don't use ~~mocha~~ as it's not compatible with _ES 6_ 
+* Don't use the normal ~~mocha~~ as it's not compatible with _ES 6_ 
 * Instead use **mocha-traceur** , work fine with _ES 6_
 * e.g: you can do the following when testing:
+Make Sure You're on the same directory as package.json , type the following
+```shell
+npm install
+```
+If it is not working , maybe it require permission , insert _**sudo**_ before the command
+
+```shell
+sudo npm install
+```
+assuming that the test file you created is inside the test directory , use _**mocha**_ as follows
+
 ```shell
 mocha test/indexspec.js  --compilers js:mocha-traceur
 ```
