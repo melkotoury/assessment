@@ -71,9 +71,9 @@
                         if (n > 0) result += "-";
                     }else {
                           let times = Math.floor(n / numeral.value);
-                        if (times == 1){
-                        }
-                        else{
+                        if (!(times == 1 && n <2000 && n>199)){
+
+
 
                             result += convert(times) + " " + numeral.str;
                             n -= numeral.value * times;

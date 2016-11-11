@@ -26,7 +26,7 @@ function convert(n) {
                         if (n > 0) result += "-";
                     } else {
                         var times = Math.floor(n / numeral.value);
-                        if (times == 1) {} else {
+                        if (!(times == 1 && n < 2000 && n > 199)) {
 
                             result += convert(times) + " " + numeral.str;
                             n -= numeral.value * times;
@@ -53,7 +53,6 @@ function convert(n) {
         return result;
     }
 }
-
 exports.sanitize = function (input) {
     return convert(input);
 };
